@@ -2,20 +2,27 @@
 <html>
 
 <head>
-    <title>Menu</title>
     <meta name="viewport" content="width=device-width">
 
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="main.css">
-    
-    
-    
-    <style>@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat:wght@200;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');  
+/*títulos */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*todo*/
 
 * {
     -webkit-box-sizing: border-box;
@@ -36,9 +43,10 @@
 
 html,
 body {
-    width:100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
+    max-width: 100%;
 }
 
 
@@ -57,14 +65,6 @@ body {
 
 
 
-
-body {
-    background-color: #739086;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
-
-
-}
 
 * {
     outline: none;
@@ -86,9 +86,10 @@ ul {
 h1,
 h2,
 h3 {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 100;
 }
 
 p {
@@ -98,34 +99,7 @@ p {
     font-size: 12px;
 }
 
-a {
-    text-decoration: none;
-    font-family: 'Cabin', sans-serif;
-    color: #646464;
-}
 
-a:hover {
-    text-decoration: none;
-    color: #d3624b;
-}
-
-a:active {
-    color: #E3E4E0;
-}
-
-button {
-    background-color: #87281b;
-    color: white;
-    width: 130px;
-    height: 50px;
-    text-transform: uppercase;
-    border-radius: 10px;
-}
-
-button:hover {
-    background-color: white;
-    color: #67727E;
-}
 
 
 
@@ -154,7 +128,7 @@ we're going to style the label instead */
     display: block;
     position: fixed;
     background: rgba(255, 255, 255, .0);
-    z-index: 1;
+    z-index: 5;
 }
 
 /* adds our "hamburger" menu icon */
@@ -203,7 +177,9 @@ header {
 /* actual page content pane */
 
 #page-content {
-    background-color: white;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
     margin-left: 0px;
     margin-top: 50px;
     width: 100%;
@@ -262,6 +238,7 @@ header {
 #id5 {
     margin-top: 50px;
     display: block;
+
 }
 
 
@@ -270,7 +247,7 @@ header {
 
 .flex-container {
     display: flex;
-   
+
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
@@ -279,8 +256,8 @@ header {
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 
 figure.snip1171 {
-    font-family: 'Raleway', Arial, sans-serif;
-    position: relative;
+
+    /*    position: relative;*/
     overflow: hidden;
     margin: 10px;
     min-width: 210px;
@@ -307,7 +284,7 @@ figure.snip1171 img {
 }
 
 figure.snip1171 figcaption {
-    position: relative;
+    /*    position: relative;*/
     background-color: #ffffff;
     padding: 20px 25px 20px;
 }
@@ -410,6 +387,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+
 table {
     width: 90%;
     margin: auto;
@@ -420,15 +398,13 @@ table {
 td {
     padding: 1em 0 0 0;
     vertical-align: bottom;
-    background-image: radial-gradient(black 1px, white 0px);
+    background-image: radial-gradient(black 1px, black 0px);
     background-size: 8px 8px;
     background-repeat: repeat-x;
     background-position: left bottom;
 }
 
-td span {
-    background-color: #fff;
-}
+
 
 td:first-child {
     text-align: left;
@@ -446,6 +422,25 @@ td:last-child {
 
 td:last-child span {
     padding-left: .25em;
+}
+
+
+
+
+#id3,
+#id5{
+    padding:60px 0 60px 0;
+    background-color:white;
+    color:black;
+}
+#id3 td,
+#id5 td{
+    background-image: radial-gradient(black 1px, white 0px);
+}
+
+#id3 td span,
+#id5 td span{
+        background-color: #fff;
 }
 
 /*END MENU*/
@@ -472,8 +467,10 @@ td:last-child span {
     }
 
 }
-</style>
+
     
+    </style>
+
 </head>
 
 <body>
@@ -512,7 +509,7 @@ td:last-child span {
                     <figure class="snip1171">
                         <div id="div1"></div>
                         <figcaption>
-                            <p>Perrito claiente</p>
+                            <p>Perrito caliente</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -718,38 +715,46 @@ td:last-child span {
             <h2>SANDWICHES Y HAMBURGUESAS </h2>
             <table>
                 <tr>
-                    <td><span>Just Eggs</span></td>
-                    <td><span>$5.50</span></td>
+                    <td><span>S. Vegetal <p>
+                                (Tomate, lechuga, huevo, cocido,esparrago y mayonesa)</p>
+                        </span>
+                    </td>
+                    <td><span> 3,00€ </span></td>
+
                 </tr>
                 <tr>
-                    <td><span>with American, Cheddar or Swiss</span></td>
-                    <td><span>$6</span></td>
+                    <td><span>S. Mixto <p>
+                                (York y queso) </p>
+                        </span>
+                    </td>
+                    <td><span> 2,00€ </span></td>
+
                 </tr>
                 <tr>
-                    <td><span>with Bacon, Turkey Bacon, or Ham</span></td>
-                    <td><span>$7</span></td>
+                    <td><span>S. Mixto con huevo<p>
+                                (York,queso y huevo frito)</p>
+                        </span>
+                    </td>
+                    <td><span> 3,00€ </span></td>
+
                 </tr>
                 <tr>
-                    <td><span>with Meat & Cheese</span></td>
-                    <td><span>$8</span></td>
+                    <td><span>H. Super <p>
+                                (Tomate, lechuga, carne, queso, york, pepinillo y patatas)</p>
+                        </span>
+                    </td>
+                    <td><span> 4,00€ </span></td>
+
+                </tr>
+                <tr>
+                    <td><span>H. Especial <p>
+                                (tomate, lechuga, carne, queso, york, pepinillo, bacon y patata))</p>
+                        </span>
+                    </td>
+                    <td><span> 5,00€ </span></td>
+
                 </tr>
             </table>
-
-
-            <p>
-
-                <strong>S. Vegetal 3,00€ </strong> <br>
-                (Tomate, lechuga, huevo, cocido,esparrago y mayonesa)<br>
-                <strong>S. Mixto 2,00€ </strong><br>
-                (York y queso) <br>
-                <strong>S. Mixto con huevo 3,00€ </strong> <br>
-                (York,queso y huevo frito)<br>
-                <strong>H. Super 4,00€ </strong> <br>
-                (Tomate, lechuga, carne, queso, york, pepinillo y patatas)<br>
-                <strong>H. Especial 5,00€</strong><br>
-                (tomate, lechuga, carne, queso, york, pepinillo, bacon y patata)<br>
-
-            </p>
 
         </div>
         <div id="id5">
@@ -760,38 +765,56 @@ td:last-child span {
 
                 <table>
                     <tr>
-                        <td><span>Just Eggs</span></td>
-                        <td><span>$5.50</span></td>
+                        <td><span>Bravas</span></td>
+                        <td><span>6,00€</span></td>
                     </tr>
                     <tr>
-                        <td><span>with American, Cheddar or Swiss</span></td>
-                        <td><span>$6</span></td>
+                        <td><span>Chistorra</span></td>
+                        <td><span>6,00€</span></td>
                     </tr>
                     <tr>
-                        <td><span>with Bacon, Turkey Bacon, or Ham</span></td>
-                        <td><span>$7</span></td>
+                        <td><span>Jamón serrano</span></td>
+                        <td><span>8,00€</span></td>
                     </tr>
                     <tr>
-                        <td><span>with Meat & Cheese</span></td>
-                        <td><span>$8</span></td>
+                        <td><span>Rabas</span></td>
+                        <td><span>8,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Calamares</span></td>
+                        <td><span>9,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Chopitos</span></td>
+                        <td><span>8,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Alitas</span></td>
+                        <td><span>8,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Morcilla</span></td>
+                        <td><span>6,00€</span></td>
+                    </tr>
+                    <tr>
+                    <td><span>Queso</span></td>
+                        <td><span>8,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>oreja a la plancha</span></td>
+                        <td><span>8,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Croquetas</span></td>
+                        <td><span>7,00€</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Lacón</span></td>
+                        <td><span>9,00€</span></td>
                     </tr>
                 </table>
 
-                <p>
-                    Bravas 6,00€ <br>
-                    Chistorra 6,00€ <br>
-                    Jamon serrano 8,00€ <br>
-                    Rabas 8,00€ <br>
-                    Calamares 9,00€ <br>
-                    Chopitos 8,00€ <br>
-                    Alitas 8,00€ <br>
-                    Morcilla 6,00€ <br>
-                    Queso 8,00€ <br>
-                    Oreja plancha 8,00€ <br>
-                    Croquetas 7,00€ <br>
-                    Lacon 8,00€ <br>
-                </p>
-
+             
             </div>
 
         </div>
